@@ -14,13 +14,13 @@ export default function AdminAddFood() {
     const [status, setStatus] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:3100/menu/get`)
+        axios.get(`https://onlinerestaurantbackend.herokuapp.com/menu/get`)
             .then((response) => {
                 console.log("r ", response.data.data);
                 setMenu(response.data.data);
             })
 
-        axios.get(`http://localhost:3100/status/get`)
+        axios.get(`https://onlinerestaurantbackend.herokuapp.com/status/get`)
             .then((response) => {
                 console.log("r ", response.data);
                 setStatus(response.data);
@@ -39,7 +39,7 @@ export default function AdminAddFood() {
         }
         axios({
             method: 'post',
-            url: 'http://localhost:3100/food/add',
+            url: 'https://onlinerestaurantbackend.herokuapp.com/food/add',
             data: payload // you are sending body instead
 
         })

@@ -6,7 +6,7 @@ export default function AdminViewMenu() {
     const [APIData, setAPIData] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:3100/food/get`)
+        axios.get(`https://onlinerestaurantbackend.herokuapp.com/food/get`)
             .then((response) => {
                 console.log("r ", response.data.data);
                 setAPIData(response.data.data);

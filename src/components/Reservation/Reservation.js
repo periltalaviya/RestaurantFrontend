@@ -13,7 +13,7 @@ export default function Reservaion() {
 
 
     const postData = () => {
-        // axios.post(`http://localhost:3100/menu/add`, {
+        // axios.post(`https://onlinerestaurantbackend.herokuapp.com/menu/add`, {
         //     menuName
         // })
         const payload = {
@@ -26,7 +26,7 @@ export default function Reservaion() {
         }
         axios({
             method: 'post',
-            url: 'http://localhost:3100/book-table/add',
+            url: 'https://onlinerestaurantbackend.herokuapp.com/book-table/add',
             data: payload // you are sending body instead
 
         })

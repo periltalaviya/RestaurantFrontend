@@ -23,7 +23,7 @@ export default function Profile() {
 
 
     useEffect(() => {
-        axios.get(`http://localhost:3100/user/getById/` + data._id)
+        axios.get(`https://onlinerestaurantbackend.herokuapp.com/user/getById/` + data._id)
             .then((response) => {
                 console.log("r ", response.data);
                 setUser(response.data);
@@ -42,7 +42,7 @@ export default function Profile() {
         }
         axios({
             method: 'put',
-            url: 'http://localhost:3100/user/update/' + data._id,
+            url: 'https://onlinerestaurantbackend.herokuapp.com/user/update/' + data._id,
             data: user // you are sending body instead
         })
         console.log("p ", payload);

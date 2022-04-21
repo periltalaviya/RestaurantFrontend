@@ -20,7 +20,7 @@ const Signup = () => {
         console.log("data ", item);
         console.warn(item)
 
-        let result = await fetch("http://localhost:3100/user/add", {
+        let result = await fetch("https://onlinerestaurantbackend.herokuapp.com/user/add", {
             method: 'POST',
             body: JSON.stringify(item),
             headers: {

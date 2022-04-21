@@ -11,7 +11,7 @@ export default function AdminAddMenu() {
         }
         axios({
             method: 'post',
-            url: 'http://localhost:3100/menu/add',
+            url: 'https://onlinerestaurantbackend.herokuapp.com/menu/add',
             data: payload // you are sending body instead
 
         })

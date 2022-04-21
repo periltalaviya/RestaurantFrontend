@@ -8,7 +8,7 @@ export default function AdminViewBookings() {
     const [buttonDisable, setButtonDisable] = useState(false)
 
     useEffect(() => {
-        axios.get(`http://localhost:3100/book-table/get`)
+        axios.get(`https://onlinerestaurantbackend.herokuapp.com/book-table/get`)
             .then((response) => {
                 console.log("r ", response.data.data);
                 setAPIData(response.data.data);
@@ -23,7 +23,7 @@ export default function AdminViewBookings() {
         }
         axios({
             method: 'put',
-            url: 'http://localhost:3100/book-table/update/' + id,
+            url: 'https://onlinerestaurantbackend.herokuapp.com/book-table/update/' + id,
             data: payload // you are sending body instead
         })
         console.log("p ", payload);
@@ -38,7 +38,7 @@ export default function AdminViewBookings() {
     //     console.log("p ", payload);
     //     // axios({
     //     //     method: 'put',
-    //     //     url: 'http://localhost:3100/book-table/update/',
+    //     //     url: 'https://onlinerestaurantbackend.herokuapp.com/book-table/update/',
     //     //     data: payload // you are sending body instead
     //     // })
     // }

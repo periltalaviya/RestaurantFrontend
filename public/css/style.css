@@ -2478,20 +2478,29 @@ li>a:only-child:after {
 /* extra */
 .panel{}
 .panel-primary {
-    background-color: #0073CF;
+    background-color: #e75b1e;
 }
 
 .panel-green {
-    background-color: #10771A;
+    background-color: #000;
     color: #fff;
 }
 
 .panel-yellow {
-    background-color: #FFC000;
+    background-color: #000;
     color: #fff;
 }
 
 .panel-red{
-    background-color: #DC0005;
+    background-color: #e75b1e;
     color: #fff;
+}
+
+.huge{
+    font-size: 24px;
+}
+
+.under-number{
+    font-size: 24px;
+    
 }

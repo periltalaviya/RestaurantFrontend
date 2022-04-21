@@ -19,7 +19,7 @@ const Signin = () => {
         console.warn(email, password)
         let item = { email, password };
         console.log("d ", item);
-        let result = await fetch("http://localhost:3100/user/login", {
+        let result = await fetch("https://onlinerestaurantbackend.herokuapp.com/user/login", {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",
