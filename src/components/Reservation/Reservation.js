@@ -25,7 +25,7 @@ export default function Reservaion() {
             no_of_persons: noOfPersons,
             comments: comments,
             user_id: data._id,
-            status_id: '6256dcb8f9fcf95c6c4974b3'
+            status_id: '6260090e43eceb38b233f189'
         }
         axios({
             method: 'post',
