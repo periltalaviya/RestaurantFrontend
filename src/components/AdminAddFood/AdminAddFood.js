@@ -75,7 +75,6 @@ export default function AdminAddFood() {
                                     <div class="form-box">
                                         <select value={menuId} onChange={(e) => setMenuId(e.target.value)} name="gender" id="gender">
                                             <option selected >Select Menu</option>
-
                                             {
                                                 menu.map(data =>
 

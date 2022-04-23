@@ -9,10 +9,20 @@ export default function Menu() {
     const [nameFilter, setNameFilter] = useState("");
     const [selectMenu, setSelectMenu] = useState("");
 
+    //get data
+    const [menu, setMenu] = useState([]);
+  
     useEffect(() => {
+        //get data
+        axios.get(`https://onlinerestaurantbackend.herokuapp.com/menu/get`)
+        .then((response) => {
+            console.log("r ", response.data.data);
+            setMenu(response.data.data);
+        })
+
         axios.get(`https://onlinerestaurantbackend.herokuapp.com/food/get`)
             .then((response) => {
-                console.log("r ", response.data.data);
+               // console.log("r ", response.data.data);
                 setAPIData(response.data.data);
             })
     }, [])
@@ -32,12 +42,21 @@ export default function Menu() {
 
                                 <div class="center">
                                     <div class="form-box" >
-                                        <select style={{ textAlign: "center" }} name="gender" id="gender" value={selectMenu}
+                                        {/* <select style={{ textAlign: "center" }} name="gender" id="gender" value={selectMenu}
                                             onChange={(e) => setSelectMenu(e.currentTarget.value, console.log("d ", e.currentTarget.value))}>
                                             <option selected>Select Menu Category</option>
                                             <option value="625722f08c940ddf7e2e3920" >Indian</option>
                                             <option value="625a646f5da82f80c073fd5f" >Chinese</option>
+                                        </select> */}
+                                         <select value={selectMenu} onChange={(e) => setSelectMenu(e.target.value)}>
+                                            <option selected >Select Menu</option>
+                                            {
+                                                menu.map(data =>
+
+                                                    <option value={data._id} key={data.id} >{data.menu_name}</option>)
+                                            }
                                         </select>
+                                   
                                     </div>
 
                                 </div>
