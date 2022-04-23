@@ -16,13 +16,13 @@ export default function AdminAddFood() {
     useEffect(() => {
         axios.get(`https://onlinerestaurantbackend.herokuapp.com/menu/get`)
             .then((response) => {
-                console.log("r ", response.data.data);
+                // console.log("r ", response.data.data);
                 setMenu(response.data.data);
             })
 
         axios.get(`https://onlinerestaurantbackend.herokuapp.com/status/get`)
             .then((response) => {
-                console.log("r ", response.data);
+                // console.log("r ", response.data);
                 setStatus(response.data);
             })
     }, [])
@@ -43,7 +43,7 @@ export default function AdminAddFood() {
             data: payload // you are sending body instead
 
         })
-        console.log("s ", statusId);
+        //console.log("s ", statusId);
     }
 
     return (

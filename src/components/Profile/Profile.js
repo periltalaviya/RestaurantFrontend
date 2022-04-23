@@ -7,7 +7,7 @@ export default function Profile() {
     const navigate = useNavigate();
 
     let data = JSON.parse(localStorage.getItem('user-info'));
-    console.log("c ", data._id);
+    // console.log("c ", data._id);
 
     const [user, setUser] = useState([]);
     //    setUser(data.user)
@@ -25,7 +25,7 @@ export default function Profile() {
     useEffect(() => {
         axios.get(`https://onlinerestaurantbackend.herokuapp.com/user/getById/` + data._id)
             .then((response) => {
-                console.log("r ", response.data);
+                // console.log("r ", response.data);
                 setUser(response.data);
             })
     }, [])
@@ -45,7 +45,7 @@ export default function Profile() {
             url: 'https://onlinerestaurantbackend.herokuapp.com/user/update/' + data._id,
             data: user // you are sending body instead
         })
-        console.log("p ", payload);
+        // console.log("p ", payload);
         navigate('/')
     }
 

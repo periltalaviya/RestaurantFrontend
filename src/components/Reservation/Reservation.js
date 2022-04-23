@@ -10,6 +10,8 @@ export default function Reservaion() {
     const [noOfPersons, setNoOfPersons] = useState('')
     const [comments, setComments] = useState('')
     //const [statusId, setStatusId] = useState('')
+    let data = JSON.parse(localStorage.getItem('user-info'));
+    // console.log("c ", data._id);
 
 
     const postData = () => {
@@ -22,6 +24,7 @@ export default function Reservaion() {
             approx_arrive_time: approxAriveTime,
             no_of_persons: noOfPersons,
             comments: comments,
+            user_id: data._id,
             status_id: '6256dcb8f9fcf95c6c4974b3'
         }
         axios({

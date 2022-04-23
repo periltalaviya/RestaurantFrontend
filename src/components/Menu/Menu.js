@@ -16,7 +16,7 @@ export default function Menu() {
         //get data
         axios.get(`https://onlinerestaurantbackend.herokuapp.com/menu/get`)
         .then((response) => {
-            console.log("r ", response.data.data);
+            // console.log("r ", response.data.data);
             setMenu(response.data.data);
         })
 

@@ -10,7 +10,7 @@ export default function AdminViewBookings() {
     useEffect(() => {
         axios.get(`https://onlinerestaurantbackend.herokuapp.com/book-table/get`)
             .then((response) => {
-                console.log("r ", response.data.data);
+                // console.log("r ", response.data.data);
                 setAPIData(response.data.data);
             })
     }, [])
@@ -26,7 +26,7 @@ export default function AdminViewBookings() {
             url: 'https://onlinerestaurantbackend.herokuapp.com/book-table/update/' + id,
             data: payload // you are sending body instead
         })
-        console.log("p ", payload);
+        // console.log("p ", payload);
         setButtonDisable(true)
     }
 

@@ -19,26 +19,26 @@ export default function AdminDashboard() {
         //user data
         axios.get(`https://onlinerestaurantbackend.herokuapp.com/user/get`)
             .then((response) => {
-                console.log("u ", response.data);
+                // console.log("u ", response.data);
                 setUserData(response.data.length);
             })
 
         //menu data
         axios.get(`https://onlinerestaurantbackend.herokuapp.com/menu/get`)
             .then((response) => {
-                console.log("r ", response.data.data);
+                // console.log("r ", response.data.data);
                 setMenuData(response.data.data.length);
             })
 
         //booking data
         axios.get(`https://onlinerestaurantbackend.herokuapp.com/book-table/get`)
             .then((response) => {
-                console.log("r ", response.data.data);
+                // console.log("r ", response.data.data);
                 setBookingData(response.data.data.length);
             })
     }, [])
 
-    console.log("a ", foodData);
+    // console.log("a ", foodData);
 
     return (
         <>

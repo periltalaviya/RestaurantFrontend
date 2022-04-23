@@ -17,8 +17,8 @@ const Signup = () => {
 
     async function signUp() {
         let item = { firstName, lastName, email, password, phoneno, gender, dob, role_id }
-        console.log("data ", item);
-        console.warn(item)
+        // console.log("data ", item);
+        // console.warn(item)
 
         let result = await fetch("https://onlinerestaurantbackend.herokuapp.com/user/add", {
             method: 'POST',
@@ -30,7 +30,7 @@ const Signup = () => {
         })
 
         result = await result.json()
-        console.warn("result", result)
+        // console.warn("result", result)
         navigate("/")
     }
 

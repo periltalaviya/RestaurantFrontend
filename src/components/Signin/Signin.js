@@ -16,9 +16,9 @@ const Signin = () => {
     }, [])
 
     async function signIn() {
-        console.warn(email, password)
+        // console.warn(email, password)
         let item = { email, password };
-        console.log("d ", item);
+        // console.log("d ", item);
         let result = await fetch("https://onlinerestaurantbackend.herokuapp.com/user/login", {
             method: 'POST',
             headers: {
@@ -28,7 +28,7 @@ const Signin = () => {
             body: JSON.stringify(item)
         });
         result = await result.json();
-        console.log("r ",result);
+        // console.log("r ",result);
         localStorage.setItem("user-info", JSON.stringify(result))
         // history.push("/");
         navigate("/")

@@ -8,12 +8,12 @@ export default function AdminViewMenu() {
     useEffect(() => {
         axios.get(`https://onlinerestaurantbackend.herokuapp.com/food/get`)
             .then((response) => {
-                console.log("r ", response.data.data);
+                // console.log("r ", response.data.data);
                 setAPIData(response.data.data);
             })
     }, [])
 
-    console.log("a ", APIData[0]);
+    // console.log("a ", APIData[0]);
     return (
         <div>
             <AdminNavbar />
