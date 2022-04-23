@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Navbar from "../Navbar/Navbar";
+import {  useNavigate } from 'react-router-dom';
 
 export default function Reservaion() {
 
@@ -12,6 +13,7 @@ export default function Reservaion() {
     //const [statusId, setStatusId] = useState('')
     let data = JSON.parse(localStorage.getItem('user-info'));
     // console.log("c ", data._id);
+    const navigate = useNavigate();
 
 
     const postData = () => {
@@ -34,6 +36,8 @@ export default function Reservaion() {
 
         })
         // console.log(menuName);
+        navigate("/")
+
     }
 
 

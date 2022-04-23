@@ -61,6 +61,7 @@ export default function AdminViewBookings() {
             <div class="container mt-5 mb-5">
                 <table>
                     <thead>
+                        <th>User ID</th>
                         <th>Booking ID</th>
                         <th>Booking Date</th>
                         <th>Booking Time</th>
@@ -74,6 +75,8 @@ export default function AdminViewBookings() {
 
                             APIData.map(data =>
                                 <tr >
+                                    <td>{data.user_id?._id}</td>
+
                                     <td>{data._id}</td>
                                     <td>{data.booking_date}</td>
                                     <td>{data.booking_time}</td>
